@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="onLoadNewPlace()" >
+        <ion-icon  name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Nice places </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+<ion-list no-lines>
+  <button ion-item
+  *ngFor="let p of places"
+  (click)="onOpenPlace(p)" >
+    {{ p.title }}
+  </button>
+
+  <button ion-item>
+    haha
+
+  </button>
+</ion-list>
+</ion-content>
